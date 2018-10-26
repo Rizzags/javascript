@@ -1,0 +1,98 @@
+------------ Mengenal var, let dan const ----------------
+const nilainya tidak bisa dirubah (constanta)
+
+var berlaku di semua tempat (nilainya akab berubah sesuai nilai akhir/diawal variabel)
+let berlaku hanya disatu tempat mengambil nilai awal/diatas
+
+-------------- Function ------------------ 
+* Penulisan Lama
+function jalansatu(){
+	console.log('jalan satu');
+}
+
+const jalandua = function(){
+	console.log("jalan dua");
+}
+
+* Penulisan Baru
+const jalantiga = ()=>{
+	console.log("jalan tiga");
+}
+
+* memanggil function
+jalansatu();
+jalandua();
+jalantiga();
+
+--------- If else ------------
+function jalansatu(){
+	var nilai = 2;
+	// if (nilai === 3) {
+	// 	console.log('benar');
+	// }else if (nilai == 2){
+	// 	console.log('dua');
+	// }else{
+	// 	console.log('salah');
+	// }
+
+//terbaru kondisi if
+	if(nilai===2)console.log('ok')
+	else console.log("bukan")		
+
+}
+
+jalansatu()
+
+----------- Switch -------------
+function testingswitch(){
+  var nilai = 8;
+  switch(nilai){
+  	case 10:
+	  	console.log("Sangat bagus");
+	  	break;
+	case 8:
+		console.log("baik");
+		break;	
+	case 6:
+		console.log("Cukup");
+		break;	
+	default:
+		console.log("lainnya");
+  }
+}
+
+testingswitch();
+
+----------- For ---------------
+function perulangan(){
+	for (var i = 1; i <= 10; i++) {
+		console.log("hari", i);
+	}
+}
+
+perulangan()
+
+------------ Array -----------
+function panggilarray(){
+	var data = [1,2,3,4,5,6]
+	var nama = ["Riza1", "Riza2", "Riza3"]
+	console.log(data.length)
+	console.log(nama.length)
+	console.log(nama[2])
+}
+
+panggilarray()
+
+
+---------- Nested Array ----------
+function panggilnestedarrya(){
+	var datanama = [["Ab","Ac","Ad"],
+	["Bola1","Bola2","Bola3"],
+	["Roni1","Roni2","Roni3"]
+	]
+	console.log(datanama.length)
+	console.log(datanama[0][2])
+	console.log(datanama[1])	
+}
+
+panggilnestedarrya()
