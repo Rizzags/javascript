@@ -91,8 +91,164 @@ function panggilnestedarrya(){
 	["Roni1","Roni2","Roni3"]
 	]
 	console.log(datanama.length)
+output : 3 (Sesuai jumlah data array)
 	console.log(datanama[0][2])
+output : Ad
 	console.log(datanama[1])	
+output : ["Bola1","Bola2","Bola3"] 
 }
 
 panggilnestedarrya()
+
+---------- Objects ---------------
+
+function panggilobjects(){
+	var mobil = {
+		type : "Sedan",
+		harga: 250000,
+		warna: "Putih",
+	}
+
+	console.log(mobil)
+output: {type: 'Sedan', harga: 250000, warna: 'Putih'}
+* Pemanggilan Secara spesifik
+	console.log(mobil.warna)
+output: Putih
+	console.log(mobil.harga)
+output: 250000
+}
+
+panggilobjects()
+
+------------ Array dalam Object -------------------
+function panggilobjects(){
+	var mobil = {
+		type : "Sedan",
+		harga: 250000,
+		warna: "Putih",
+		tahun: [2016,2017,2018,2019]
+	}
+	console.log(mobil.tahun)
+output: [2016,2017,2018,2019]
+	console.log(mobil.tahun[2])
+output: 2018
+}
+
+panggilobjects()
+
+---------- Mengecek tipe data ----------
+function checktipedata(){
+	var data = {
+		nama: "andi",
+		umur: 20
+	}
+	var nama = "Riza";
+	var angka = 122;
+	console.log(typeof(data))
+array tipe datanya juga object
+output: object
+	console.log(typeof(nama))
+output: string
+	console.log(typeof(angka))
+output: number
+}
+
+checktipedata()
+
+------------ comments -----------
+function panggilcomments(){
+/*
+	console.log('satu')
+	console.log('dua')
+	console.log('tiga')
+*/
+}
+
+panggilcomments()
+
+
+--------- operator ---------
+function panggiloperator(){
+	var a = 4;
+	var b = 8;
+	return a / b
+}
+
+console.log(panggiloperator())
+//output: 0.5
+
+-------- Tipe Data ----------
+
+function tipedata() {
+	var data = "3";
+	console.log(typeof(data))
+	if (data === 3) {
+		return "sukses";
+	} else {
+		return "gagal";
+	}
+}
+==  : yang penting sama
+=== : lebih spesifik tipe datanya harus sama
+console.log(tipedata())
+output: string
+	gagal
+
+-------- Memanipulasi array dengan javascript ----------
+meghapus nilai pertama array
+
+function panggilshit(){
+	var kota = ['jakarta','bandung', 'semarang', 'makasar'];
+  console.log(kota);
+  console.log("===============");
+	var kota2 = kota.shift();
+	console.log(kota2)
+	return kota
+}
+
+console.log(panggilshit())
+
+output : ['jakarta','bandung','semarang','makasar']
+==================
+jakarta
+['bandung','semarang','makasar']
+
+
+------------ Memanipulasi array dengan POP -----------    
+menghapus nilai terakhir array
+
+function panggilpop(){
+	var kota = ['jakarta','bandung','medan','makasar'];
+	console.log(kota)
+	kota.pop()
+	return kota	
+}
+
+console.log(panggilpop())
+output : ['jakarta','bandung','medan','makasar']
+	 ['jakarta','bandung','medan']
+
+-------- Memanipulasi array dengan PUSH -----------
+Menambahkan jumlah array
+function panggilpush(){
+var data = [1,2,3,4,5,6,4,3,4,3]
+console.log(data)
+data.push(9,'Jakarta')	
+return data
+}
+console.log(panggilpush())
+output : [1,2,3,4,5,6,4,3,4,3,9,'jakarta]
+
+------------- Memanipulasi array dengan splice ---------
+function panggilsplice() {
+
+	var kota = ['jakarta','bandung', 'semarang', 'makasar'];
+	console.log(kota)
+	kota.splice('2',0,'palembang')
+	return kota
+}
+
+console.log(panggilsplice())
+output: ['jakarta','bandung', palembang ,'semarang', 'makasar']
+* kalau diganti 1 maka data array yg disamping kanannya hilang 1
+* kalau diganti 2 maka data array yg disamping kanannya hilang 1
